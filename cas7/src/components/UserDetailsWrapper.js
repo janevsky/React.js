@@ -1,12 +1,12 @@
 // components
-import DisplayUserDetails from './DisplayUserDetails'
+import DisplayUserDetails from './DisplayUserDetails';
 
-const UserDetailsWrapper = (props) =>{
+const UserDetailsWrapper = () => {
     return (
         <div>
             <h2>This is wrapper</h2>
-            {/* <DisplayUserDetails data={props.data}/> */}
-            <DisplayUserDetails/>
+            {/* <DisplayUserDetails data={props.data}/>*/}
+            <DisplayUserDetails />
         </div>
     );
 };
