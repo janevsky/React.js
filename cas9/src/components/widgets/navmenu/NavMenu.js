@@ -1,17 +1,16 @@
 // vendor imports
 import { Link } from 'react-router-dom';
 // styles
-import '../style.css';
+import './style.css';
 
 const NavMenu = () => {
     return (
         <div className='navmenu-wrapper'>
             <div className='navmenu'>
-            <Link to='/'>Home</Link>
-            <Link to='/About'>About</Link>
-            <Link to='/Info'>Info</Link>
-            <Link to='/Users'>Users</Link>
-            <Link to='/'>Test</Link>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/home/info'>Info</Link>
+                <Link to='/users'>Users</Link>
             </div>
         </div>
     );
