@@ -11,6 +11,8 @@ const NavMenu = () => {
                 <Link to='/about'>About</Link>
                 <Link to='/home/info'>Info</Link>
                 <Link to='/users'>Users</Link>
+                <Link to='/posts'>Posts</Link>
+                <Link to='/comments'>Comments</Link>
             </div>
         </div>
     );

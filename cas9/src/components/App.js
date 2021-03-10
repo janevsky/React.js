@@ -6,6 +6,8 @@ import About from './pages/About';
 import Info from './pages/Info';
 import Users from './pages/Users';
 import NavMenu from './widgets/navmenu/NavMenu';
+import Posts from './pages/Posts';
+import Comments from './pages/Comments';
 // styles
 import '../assets/styles/global.css';
 
@@ -21,6 +23,8 @@ const App = (props) => {
       {/* Task 03 - Create info route  path='/home/info' */}
       <Route exact path='/home/info' component={Info} />
       <Route exact path='/users' component={Users} />
+      <Route exact path='/posts' component={Posts} />
+      <Route exact path='/comments' component={Comments} />
     </>
   );
 };

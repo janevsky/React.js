@@ -5,9 +5,37 @@
 html, body, #root, .wrapper {
     width: 100%;
     height: 100%;
+    padding-top: 0.3rem;
 }
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.postsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posts {
+    width: 40%;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.titlePosts {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.bodyPosts {
+    margin-bottom: 1rem;
+}
+
+.post, h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
 }
