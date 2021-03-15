@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body, #root, .wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.3rem;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postsWrapper, .usersWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posts, .users {
+    width: 40%;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.userName, .titlePosts {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.bodyPosts {
+    margin-bottom: 1rem;
+}
+
+.post, h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
