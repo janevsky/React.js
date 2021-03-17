@@ -13,6 +13,11 @@ const Users = () => {
             .then(data => {
                 setUsers(data);
                 setIsDataFetched(true);
+                fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+                .then(data => {
+                    
+                })
+                console.log(data)
             })
             .catch(error => {
                 console.log('error', error);

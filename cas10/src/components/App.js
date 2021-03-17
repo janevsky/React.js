@@ -9,6 +9,7 @@ const App = () => {
   const [isDataFetched, setIsDataFetched] = useState(false);
   const [albums, setAlbums] = useState([]);
   const [error, setError] = useState('');
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
 
   useEffect(() => {
     /* fetch('https://jsonplaceholder.typicode.com/posts/1') // GET, POST, PUT, PATCH, DELETE
@@ -51,6 +52,10 @@ const App = () => {
     }
   }); */
 
+  const setAlbumDetails = (index) => {
+    setSelectedAlbum(albums[index]);
+  };
+
   return (
     <div id='app'>
       {/* Task 01 - From https://jsonplaceholder.typicode.com/.
@@ -63,22 +68,31 @@ const App = () => {
         ?
         error === ''
           ?
-          <div>
+          <>
             <h2>Albums</h2>
-            {albums.slice(0, 10).map(album => {
+            {albums.slice(0, 10).map((album, index ) => {
               return (
-                <p key={album.id}>{album.title}</p>
+                <Album key={album.id} title={album.title} setAlbumDetails={setAlbumDetails} index={index}/>
               )
             })
             }
-            {albums[0] && <Popup album={albums[0]} />}
-          </div>
+            {selectedAlbum && <Popup album={selectedAlbum} />}
+          </>
           :
           <h2>{error}</h2>
         :
         <h2>Loading data..</h2>
       }
     </div>
+  );
+};
+
+const Album = (props) => {
+  const handleTitleClick =() => {
+    props.setAlbumDetails(props.index)
+  }
+  return (
+  <p onClick={handleTitleClick}>{props.title}</p>
   );
 };
 
