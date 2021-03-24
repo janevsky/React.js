@@ -27,7 +27,6 @@ const App = (props) => {
         setIsDataFetched(true);
         setError('Error fetching users');
       });
-      // eslint-disable-next-line
   }, []);
 
   return (
@@ -61,5 +60,13 @@ const mapDispatchToProps = dispatch => {
     setUsers: (users) => { dispatch(setUsers(users)) }
   }
 };
+
+/**
+ * Homework 12
+ * 1. In Stats page show the total number of the users.
+ * 2. Add new user. What happens with the number of the users shown in Stats page? Why that happens?
+ * 3. Implement feature to delete user from the list. (add &times; sign next to the user name; on click on the sign delete the user from the list).
+ * * Bonus - create new app. Setup the redux. Fetch some data, set the data in the redux and display it properly from the redux.
+ */
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
